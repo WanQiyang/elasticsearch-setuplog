@@ -86,4 +86,4 @@ curl -XGET "http://localhost:9200/$INDEX/$TYPE/_search?q=$COND:$VALUE"
 curl -XDELETE "http://localhost:9200/$INDEX/$TYPE/$ID"
 ```
 <br>
-更多方法详见[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)。
+更多方法详见 [官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) 。
