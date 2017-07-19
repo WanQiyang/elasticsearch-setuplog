@@ -1,2 +1,3 @@
 # elasticsearch-setuplog
-ElasticSearch 安装记录
+Elasticsearch 安装记录<br><br>
+安装流程记录在SetupLog.md中。
