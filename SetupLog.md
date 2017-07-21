@@ -52,6 +52,11 @@ Install the Elasticsearch Debian package
 sudo apt-get update && sudo apt-get install elasticsearch
 ```
 
+需要注意的是，此时不能以root权限直接运行可执行文件，而应通过服务启动：
+```sh
+service elasticsearch start
+```
+
 ### 验证安装
 此时另开启一个终端，输入
 ```sh
