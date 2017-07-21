@@ -17,6 +17,7 @@ java -version
 *注：需要注意的是，如果Ubuntu的更新源选择不恰当，极有可能安装失败。aliyun的源实测可用，建议在安装前换源。*
 
 ## 运行Elasticsearch
+### 方式一：通过下载安装包
 从官方网站 https://www.elastic.co/downloads/elasticsearch 下载最新版本的Elasticsearch。<br><br>
 拷贝tar包至工作目录后，输入
 ```sh
@@ -33,6 +34,25 @@ tar -xvf elasticsearch-$VERSION.tar.gz
 ```sh
 [0] indices into cluster_state
 ```
+
+### 方式二：通过Debian Package
+部分操作与后续安装Kibana相同，执行一次即可。<br><br>
+默认安装目录为 /usr/share/elasticsearch/。<br><br>
+Import the Elasticsearch PGP Key
+```sh
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+```
+Installing from the APT repository
+```sh
+sudo apt-get install apt-transport-https
+echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+```
+Install the Elasticsearch Debian package
+```sh
+sudo apt-get update && sudo apt-get install elasticsearch
+```
+
+### 验证安装
 此时另开启一个终端，输入
 ```sh
 curl 'http://localhost:9200'
