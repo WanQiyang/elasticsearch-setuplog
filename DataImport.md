@@ -80,5 +80,7 @@ if __name__ == '__main__':
 python import.py
 ```
 即可完成数据的批量导入。<br><br>
-全部导入后使用浏览器访问页面 http://localhost:9200/sh/stock/_search （将地址改为Elasticsearch的地址）可验证数据已导入成功，显示共有3612326条记录。
+全部导入后使用浏览器访问页面 http://localhost:9200/sh/stock/_search （将地址改为Elasticsearch的地址）可验证数据已导入成功。<br><br>
+![screenshot](https://github.com/WanQiyang/elasticsearch-setuplog/raw/master/screenshot.png)<br><br>
+如图所示，显示共有3612326条记录。
 
