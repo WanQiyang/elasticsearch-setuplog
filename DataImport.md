@@ -27,7 +27,7 @@ pip install pandas
 数据包含中文，采用GB18030编码。<br><br>
 
 ## 批量导入
-以下代码默认数据位于目录./A/中。新建文件import.py：
+以下代码默认数据位于目录./A/中。保持Elasticsearch正常运行，新建文件import.py：
 ```python
 import pandas as pd
 from pyelasticsearch import ElasticSearch
@@ -79,4 +79,6 @@ if __name__ == '__main__':
 ```sh
 python import.py
 ```
-即可完成数据的批量导入。
+即可完成数据的批量导入。<br><br>
+全部导入后使用浏览器访问页面 http://localhost:9200/sh/stock/_search （将地址改为Elasticsearch的地址）可验证数据已导入成功，显示共有3612326条记录。
+
